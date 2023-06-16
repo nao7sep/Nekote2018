@@ -102,17 +102,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Nekote\Nekote.csproj">
+    <ProjectReference Include="..\Nekote2018\Nekote2018.csproj">
       <Project>{4aa00c53-c013-49e7-91ac-48ac76368a0f}</Project>
       <Name>Nekote</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Content Include="Documents\iManagedFileTester\Base36 %2820190928T142958Z%29.txt" />
-    <Content Include="Documents\iManagedFileTester\Guid %2820190928T142958Z%29.txt" />
-    <Content Include="Documents\iManagedFileTester\SafeCode %2820190928T142958Z%29.txt" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Magick.NET-Q8-AnyCPU.11.2.0\build\netstandard20\Magick.NET-Q8-AnyCPU.targets" Condition="Exists('..\packages\Magick.NET-Q8-AnyCPU.11.2.0\build\netstandard20\Magick.NET-Q8-AnyCPU.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
