@@ -31,9 +31,6 @@ namespace Nekote
         // なお、destFileNameFormat の {0} には、UtcNow.Ticks に Z をつなげたものが入る
         // また、空でないファイルが一つも見付からないときには、ZIP ファイルが作成されない
 
-        // Thu, 02 May 2019 07:35:20 GMT
-        // *ThreadUnsafe としていたが、memo.txt に書いた理由によりやめる
-
         // Sun, 05 May 2019 20:56:54 GMT
         // *AutoLock というメソッドをそれぞれに用意していたが、
         // データベースのファイルを操作するときに lock を行わないミスはあり得ず、
@@ -122,9 +119,6 @@ namespace Nekote
         // Backup* の場合、Ticks によるファイル名の重複もあり得なくはないが、リスクはデータベースアクセスの方が格段に大きい
         // そのため、これら二つの処理を分離し、まず Ticks で出力先のファイル名のみ確定する仕様にしたとしても、圧縮のコードを安全とは見なせない
         // よって、全てまとめて単一のメソッドにしたものを *ThreadUnsafe としておく
-
-        // Thu, 02 May 2019 07:35:20 GMT
-        // *ThreadUnsafe としていたが、memo.txt に書いた理由によりやめる
 
         public static void BackupOneFile (string sourceFilePath,
                 string destDirectoryPath, string destFileNameFormat = "Data ({0}).zip") =>

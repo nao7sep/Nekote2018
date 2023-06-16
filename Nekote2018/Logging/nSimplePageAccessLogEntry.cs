@@ -34,11 +34,9 @@ namespace Nekote
 
         // Tue, 07 May 2019 10:17:01 GMT
         // RawUrl を廃止し、UrlOriginalString に切り替える
-        // 長くなりそうなので、コメントを memo.txt の方に書く
 
         // Tue, 07 May 2019 11:26:15 GMT
         // なかなかガッツリ紆余曲折中だが、やはり RawUrl を使う
-        // その結論に至るまでに調べたことなども memo.txt に殴り書きした
 
         // Tue, 07 May 2019 11:37:26 GMT
         // Response.StatusCode を入れたくなったが、何についての統計をとるかというのがブレてくるので却下

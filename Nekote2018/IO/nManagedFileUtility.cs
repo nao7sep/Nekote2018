@@ -109,9 +109,6 @@ namespace Nekote
         // nikoP でも、一時パスの取得のためにまずロックし、ロック外でファイルの保存などを行い、またロックして Manage* を呼んでいる
         // その二つ目のロックの中でなぜか CreateOrUpdateAdditionalImages まで行うのは、たぶんバグなので修正を試みる
 
-        // Thu, 02 May 2019 07:35:20 GMT
-        // *ThreadUnsafe としていたが、memo.txt に書いた理由によりやめる
-
         // Sun, 05 May 2019 19:20:41 GMT
         // GUID で決め打ちにしていた実装を Base36 に変更した上、
         // PathMode 次第では旧来の動作にも戻せるようにした

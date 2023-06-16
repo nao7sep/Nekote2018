@@ -8,7 +8,6 @@ namespace Nekote
 {
     // Sun, 05 May 2019 07:12:09 GMT
     // nApplication に入れていた静的なものの多くを、新たに作ったこのクラスに移した
-    // そうした理由については、たぶん長くなるので memo.txt に書いておく
 
     public static class nStatic
     {
@@ -230,9 +229,6 @@ namespace Nekote
         // Sat, 04 May 2019 05:38:29 GMT
         // Data\Kvs にファイルを作っていく KVS もすぐに使える
         // SimpleLog と命名を揃えているので、今後も続ける
-
-        // Mon, 06 May 2019 19:14:38 GMT
-        // クラス名の単複や Simple という単語について紆余曲折があったので、memo.txt に書いておく
 
         private static nSimpleKvsDataProvider mKvs = null;
 

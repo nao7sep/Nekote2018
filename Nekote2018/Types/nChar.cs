@@ -140,11 +140,6 @@ namespace Nekote
         // というコメントがあったため、理由としてやや不十分かもしれないが、暫定的に小文字に揃えている
         // https://github.com/dotnet/coreclr/blob/master/src/utilcode/sortversioning.cpp
 
-        // 気になったので、「大文字・小文字の変換結果.txt」というメモを作成し、Agile レポジトリーに入れておいた
-        // こちらには、0から char.MaxValue までを大文字または小文字にしたときに値が変わるものがリストとして収まっている
-        // 2千近くの文字が影響を受けるというのは予想以上に多かったが、全く理解不能な変換というのもなさそうだった
-        // 特定の言語に関わる実装でなく、ASCII だけ想定しての ignoresCase なら、これでしばらく様子を見てよいだろう
-
         public static int Compare (char char1, char char2, bool ignoresCase = false)
         {
             if (ignoresCase)

@@ -17,7 +17,7 @@ namespace Nekote
     // { get; private set; } も考えたが、全体を const で統一できるなら、プロパティーでないといけない理由がない
 
     // Tue, 01 Oct 2019 02:45:23 GMT
-    // 「定数の扱い方.txt」に書いた理由により、全体を static readonly に変更した
+    // 全体を static readonly に変更した
     // 以下は Unicode の仕様であり、変更の可能性が極めて低いが、それでも const を避ける
     // static readonly でいけない理由がなく、そちらの方が適用範囲が広いため
 
@@ -39,7 +39,6 @@ namespace Nekote
         public static readonly string RightPointingDoubleAngleQuotationMarkHtml = "&raquo;";
 
         // Sat, 28 Sep 2019 18:03:41 GMT
-        // diff のところで、改行の追加や削除を示すときに使っている記号
         // 折れている矢印の記号もあるが、「改行」固有のものはこれだけのようである
         // https://www.compart.com/en/unicode/U+23CE
 

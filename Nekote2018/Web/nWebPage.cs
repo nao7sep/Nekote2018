@@ -21,8 +21,6 @@ namespace Nekote
 
     public class nWebPage: Page
     {
-        // Tue, 07 May 2019 23:16:38 GMT
-        // CanContinue が必要な理由を memo.txt に書いた
         public bool CanContinue { get; private set; } = true;
 
         #region ユーザー認証関連

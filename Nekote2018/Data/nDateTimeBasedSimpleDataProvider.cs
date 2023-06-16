@@ -18,8 +18,7 @@ namespace Nekote
     // 遅い環境だろうと、100～1,000件くらいなら遅延をほぼ全く体感せずに使えるだろう
 
     // Sat, 04 May 2019 16:56:11 GMT
-    // Ticks を文字列にするところで0詰めを行うべきか考えたときのことを memo.txt に書いておく
-    // 結論としては、あと1,000年くらいは桁が上がらないため0詰めは不要である
+    // あと1,000年くらいは桁が上がらないため0詰めは不要である
 
     public class nDateTimeBasedSimpleDataProvider <T>
     {
@@ -31,7 +30,6 @@ namespace Nekote
 
         // Fri, 03 May 2019 02:37:53 GMT
         // Encoder だったものを TypeToDictionary に変更するなどした
-        // 今後ずっと引き継ぐ仕様が新たに生じたため、memo.txt に書いておく
 
         public Func <T, nDictionary> TypeToDictionary { get; private set; }
 
@@ -72,7 +70,7 @@ namespace Nekote
         // Thu, 02 May 2019 10:02:47 GMT
         // 以下、マルチスレッドに対応していないメソッドが並ぶが、*ThreadUnsafe という命名を廃止したので、以下でも行っていない
         // また、スレッドセーフにしたところでプロセスセーフにはできないし、そもそもクラス全体がスレッドセーフでないなら無理をできないため、
-        // memo.txt に書いた理由にもより、*AutoLock という命名のメソッドをこのクラスには用意しない
+        // *AutoLock という命名のメソッドをこのクラスには用意しない
 
         public void EnsureLoaded ()
         {

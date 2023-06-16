@@ -10,9 +10,6 @@ namespace Nekote
     // 列の説明は nSimplePageAccessLogEntry と nSimpleUserLoginLogEntry に、
     // const にする理由は nSimplePageAccessLogEntryCsvIndices に書いた
 
-    // Tue, 01 Oct 2019 02:34:28 GMT
-    // 定数の扱い方について変更し、「定数の扱い方.txt」を書いた
-
     public static class nSimpleUserLoginLogEntryCsvIndices
     {
         public static readonly int Utc = 0;

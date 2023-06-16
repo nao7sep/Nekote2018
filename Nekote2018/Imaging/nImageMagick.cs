@@ -412,7 +412,6 @@ namespace Nekote
 
             // 追記: normalize は contrast-stretch だが、私の実装は linear-stretch のようだ
             // となると、同じパラメーターを使うのもアレだが、多数の画像で試しての結果が良好なので、このまま使っていく
-            // レベル補正の方法が多くて分かりにくいため、「ImageMagick におけるレベル補正.txt」にまとめた
 
             // Sat, 01 Dec 2018 20:49:03 GMT
             // nManagedFile.CreateOrUpdateAdditionalImages のコメントに書いた理由により、こちらでもデフォルト値を変更

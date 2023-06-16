@@ -50,7 +50,6 @@ namespace Nekote
         public nDictionary Values { get; private set; } = new nDictionary ();
 
         // Fri, 03 May 2019 04:21:18 GMT
-        // 命名については右往左往があったので memo.txt に書いた
         // こちらを TypeToDictionary でなく Entry* とするのは、こちらはジェネリックでないため
         // クラス名が *Entry であり、そのものを nDictionary と相互変換するイメージが明確なので、この命名でよい
         // このあたりは、きちんとしたルールを定めることが難しく、臨機応変に最善の仕様を考えることになる

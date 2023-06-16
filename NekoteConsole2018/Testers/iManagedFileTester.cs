@@ -21,13 +21,6 @@ namespace NekoteConsole
         // といったことの繰り返しにより、どうしても使いにくいクラス群になっていたので、いっそのことテストコードを書いてみた
         // もっとも、重要なのはテストそのものでなく、その結果として生じるレポートのファイルこそが便利になるだろう
 
-        // Sat, 28 Sep 2019 14:34:07 GMT
-        // 先ほど実行してのレポートのファイルを NekoteConsole\Documents\iManagedFileTester に入れた
-        // これらは、ただのテスト結果でなく、nManaged* の仕様を思い出すにおいて便利である
-        // 行数カウントの対象になる問題は、除外するパスの設定によって容易に回避できる
-        // 今後、ドキュメントは、それと最も関連性の高いプロジェクトの Documents ディレクトリー以下に入れていく
-        // それは Nekote プロジェクトも同じで、Nekote\Documents のものを Nekote\Nekote\Documents に移動する
-
         public static void TestEverything ()
         {
             // Sat, 28 Sep 2019 13:56:42 GMT

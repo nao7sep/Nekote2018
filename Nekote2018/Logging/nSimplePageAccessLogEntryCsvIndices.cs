@@ -8,7 +8,6 @@ namespace Nekote
 {
     // Tue, 01 Oct 2019 02:32:21 GMT
     // nSimplePageAccessLogEntry を CSV にするためにまず nStringTableRow にするところで使うクラス
-    // 以前、ここに書いていたコメントを先ほど「定数の扱い方.txt」に移した
 
     public static class nSimplePageAccessLogEntryCsvIndices
     {

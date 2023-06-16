@@ -19,10 +19,6 @@ namespace Nekote
     // GetAvailablePathThreadUnsafe 付近に書いた理由により、Create* を用意したため、今後はそちらを使う
     // nTemp* は、ディレクトリーもファイルも、既に存在していても問題がないように実装されている
 
-    // Thu, 02 May 2019 07:41:52 GMT
-    // *ThreadUnsafe という命名を、memo.txt に書いた理由によってやめたが、
-    // 上記のコメントについては、そのままでないと意味が通らないためそのままとする
-
     public class nTempFile: IDisposable
     {
         public string Path { get; private set; }

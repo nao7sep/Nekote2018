@@ -54,7 +54,6 @@ namespace Nekote
         // そのため、<title> タグに他社が何を設定しているか、パンくずリストはどうなのか、といったことを調べた上、ASCII に過度にこだわらず、« を採用する
         // 私は、<title> にもこれを使い、右向きになるパンくずリストには » を使おうと思うが、Google は、検索結果に全角の › を入れてくる
         // 「タイポグラフィー的に」という理由で ASCII の > を避ける人は多く、その場合、› か » では、> と区別がつきにくい方を敢えて使う合理性は乏しい
-        // Nekote では、nDiffMatchPatch.cs には ⏎ を使っていて、かなりフォントを選ぶ冒険だと思っていたが、現行のブラウザーはどれもサクッと表示する
         // 決め打ちにはしていても、変更できないわけでないし、それは SubjectFormat も同じなので、そこそこ今風（？）なものを採用していい
         // https://stackoverflow.com/questions/16262480/how-to-properly-indicate-the-direction-within-a-breadcrumbs
         // https://css-tricks.com/markup-for-breadcrumbs/
@@ -68,8 +67,7 @@ namespace Nekote
         // メンバー変数は、通常、バリバリ変更し、使い込むものであり、定数「的」なものに使うには違和感を覚える
 
         // Tue, 01 Oct 2019 02:39:50 GMT
-        // パッと次に進むつもりだったが、自分の知識不足を知り、いろいろと改善し、また、「定数の扱い方.txt」をまとめた
-        // 以下の場合、変更できるべきでないが、定数によって初期化することもできないため、static readonly が適する
+        // 変更できるべきでないが、定数によって初期化することもできないため、static readonly が適する
         // 名前については、private の readonly なので、上記のメモに基づき、i をつけるのが妥当
 
         private static readonly string iSubjectFormatDefaultValue = "Notification " + nHtmlChars.LeftPointingDoubleAngleQuotationMark + " {0}";

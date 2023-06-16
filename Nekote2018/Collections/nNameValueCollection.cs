@@ -17,7 +17,6 @@ namespace Nekote
     // https://referencesource.microsoft.com/#System/compmod/system/collections/specialized/nameobjectcollectionbase.cs
 
     // Sun, 19 May 2019 06:00:49 GMT
-    // 全体的に実装を見直すにおいて、ソースを精読した結果を memo.txt に書いた
     // 元がグチャグチャなクラスなので限界があるが、可能な限り Dictionary に近付ける
     // ただ、null をキーとして使えてしまうのは、禁止すると、アクセスできないデータが生じうる
     // クエリー文字列でもそういうのがあった気がするし、Nekote だけが見られないのは問題
