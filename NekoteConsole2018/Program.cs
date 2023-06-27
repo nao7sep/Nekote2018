@@ -20,7 +20,7 @@ namespace NekoteConsole
         // Fri, 27 Sep 2019 18:08:35 GMT
         // Clipboard.SetText を使うため
         [STAThread]
-        static void Main (string [] args)
+        static void Main (/* string [] args */)
         {
             #region 実行済みのテスト
             // iStringTableHelperTester.TestRoundtrips (); // OK

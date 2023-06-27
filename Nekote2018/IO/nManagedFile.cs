@@ -516,7 +516,9 @@ namespace Nekote
                     xRelativePath = $@"{FirstRandomString}\r{xMaxWidthAndHeight.nToString ()}\{xFileName}";
                 else xRelativePath = $@"{FirstRandomString}\opt\{xFileName}";
 
+#pragma warning disable IDE0059
                 ImageInfo.GetFitSize (xMaxWidthAndHeight, xMaxWidthAndHeight, false, out int xWidth, out int xHeight, out bool xIsEnlarged);
+#pragma warning restore IDE0059
                 xImages.Add (new nManagedImage (this, xRelativePath, xWidth, xHeight));
             }
 
@@ -694,11 +696,13 @@ namespace Nekote
         // 結局、maxResizedImageCount に初期値を与えた
         // ここは関係ないようだが、コメントで言及されているため一応
 
+#pragma warning disable IDE0059
         public bool CreateOrUpdateAdditionalImages () =>
             CreateOrUpdateAdditionalImages (
                 nManagedFileUtility.BlackPointForLevel, nManagedFileUtility.WhitePointForLevel,
                 out byte xMinValueForLevel, out byte xMaxValueForLevel,
                 nManagedFileUtility.AppliesUnsharpMask, nManagedFileUtility.JpegQuality);
+#pragma warning restore IDE0059
 
         // Thu, 08 Nov 2018 02:53:51 GMT
         // 画像を表示するエリアの縦横を指定することで、どれをどういった縦横指定で出力するべきか分かるメソッド

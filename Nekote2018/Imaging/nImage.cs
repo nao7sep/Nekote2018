@@ -356,12 +356,14 @@ namespace Nekote
 
         public static bool GetImageSize (string path, out int width, out int height)
         {
+#pragma warning disable IDE0059
             if (GetImageInfo (path, out nImageFormat xFormat,
                 out bool xIsAnimated, out int xOrientation, out width, out height))
             {
                 ApplyOrientation (ref width, ref height, xOrientation);
                 return true;
             }
+#pragma warning restore IDE0059
 
             return false;
         }
@@ -371,8 +373,10 @@ namespace Nekote
 
         public static bool IsImage (string path)
         {
+#pragma warning disable IDE0059
             return GetImageInfo (path, out nImageFormat xFormat,
                 out bool xIsAnimated, out int xOrientation, out int xWidth, out int xHeight);
+#pragma warning restore IDE0059
         }
 
         // Mon, 24 Sep 2018 08:24:04 GMT

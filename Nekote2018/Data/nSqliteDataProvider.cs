@@ -40,7 +40,7 @@ namespace Nekote
 
         public SQLiteCommand Command { get; private set; }
 
-        private List <SQLiteDataReader> mDataReaders = new List <SQLiteDataReader> ();
+        private readonly List <SQLiteDataReader> mDataReaders = new List <SQLiteDataReader> ();
 
         public nSqliteDataProvider (string connectionString)
         {

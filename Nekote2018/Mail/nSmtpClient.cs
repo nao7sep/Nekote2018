@@ -106,8 +106,10 @@ namespace Nekote
         // Fri, 05 Apr 2019 04:45:00 GMT
         // 使用頻度が低いだろうが、一応用意
 
+#pragma warning disable IDE0060
         public byte [] GetEntireLogInBinary (Encoding encoding = null) =>
             LoggingStream.ToArray ();
+#pragma warning restore IDE0060
 
         public void Dispose ()
         {

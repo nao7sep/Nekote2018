@@ -115,8 +115,10 @@ namespace Nekote
                 // このメソッドでは、対策として、自前で計算した縦横への縮小化を行っている
                 // そうしておけば、GetFitSize による結果が常に縮小版の大きさだという前提にも立てる
 
+#pragma warning disable IDE0059
                 nImage.GetFitSize (maxWidth, maxHeight, image.Width, image.Height, enlarges,
                     out int xWidth, out int xHeight, out bool xIsEnlarged);
+#pragma warning restore IDE0059
 
                 // ImageMagick では以下のフォーマットによって ! を添えることで縦横比を保た「ない」縮小化が可能
                 // 計算に誤りがあり、むしろ ! を添えてこそ縦横比を保てているように思うが、とりあえず対策はできているはず

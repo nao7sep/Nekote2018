@@ -57,7 +57,9 @@ namespace Nekote
         {
             get
             {
+#pragma warning disable IDE0027
                 return Dictionary [key];
+#pragma warning restore IDE0027
             }
 
             set

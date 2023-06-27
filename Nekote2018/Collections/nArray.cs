@@ -149,7 +149,9 @@ namespace Nekote
             return IndexOf (sourceArray, 0, sourceArray.Length, targetArray, 0, targetArray.Length);
         }
 
+#pragma warning disable IDE0060
         public static int IndexOfAny <T> (T [] sourceArray, int sourceIndex, int sourceLength, T [] targetValues)
+#pragma warning restore IDE0060
         {
             // これも .NET ではできないようなので、ループを回して Default で比較する
             EqualityComparer <T> xComparer = EqualityComparer <T>.Default;
@@ -214,7 +216,9 @@ namespace Nekote
             return LastIndexOf (sourceArray, 0, sourceArray.Length, targetArray, 0, targetArray.Length);
         }
 
+#pragma warning disable IDE0060
         public static int LastIndexOfAny <T> (T [] sourceArray, int sourceIndex, int sourceLength, T [] targetValues)
+#pragma warning restore IDE0060
         {
             EqualityComparer <T> xComparer = EqualityComparer <T>.Default;
 
