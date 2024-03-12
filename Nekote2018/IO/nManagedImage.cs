@@ -46,14 +46,14 @@ namespace Nekote
             }
         }
 
-        private string mRelativeUrl = null;
+        private readonly string mRelativeUrl = null;
 
         public string RelativeUrl
         {
             get
             {
                 if (mRelativeUrl == null)
-                    mRelativeUrl = RelativePath.nReplace (nPath.DefaultSeparatorChar, nUrl.DefaultSeparatorChar);
+                    throw new NotSupportedException ();
 
                 return mRelativeUrl;
             }

@@ -1,9 +1,7 @@
 ﻿# ディレクトリー
 .vs/
 bin/
-Lib/
 obj/
-packages/
 
 # ファイル
 .DS_Store

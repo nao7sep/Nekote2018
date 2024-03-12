@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.IO;
-using System.Web;
 
 namespace Nekote
 {
@@ -129,7 +128,7 @@ namespace Nekote
         // https://docs.microsoft.com/en-us/dotnet/api/system.web.mimemapping.getmimemapping
 
         public static string GetMimeMapping (string path) =>
-            MimeMapping.GetMimeMapping (path);
+            throw new NotSupportedException ();
 
         // Sun, 31 Mar 2019 04:02:36 GMT
         // ファイルの比較や、ファイルから計算したハッシュの比較をたまにやるので、メソッドを揃えた

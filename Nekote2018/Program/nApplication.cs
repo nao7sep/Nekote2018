@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.IO;
 using System.Reflection;
-using System.Web;
-using System.Web.Hosting;
 
 namespace Nekote
 {
@@ -41,23 +39,7 @@ namespace Nekote
 
                     else
                     {
-                        // Thu, 25 Apr 2019 04:30:04 GMT
-                        // ウェブでも動くようにしたが、HttpContext.Current に依存するため、Application_Start などで使えないという痛い問題がある
-                        // その日のデータベースファイルを朝一でバックアップするような処理は、ページ側のコードにトリガーをねじ込むことになる
-                        // 以下のコードは借り物で、なぜそれで動くのか調べていないが、昔から動いているので、動かなくなるまでそのまま使う
-                        // https://stackoverflow.com/questions/4277692/getentryassembly-for-web-applications
-
-                        // Thu, 25 Apr 2019 08:53:04 GMT
-                        // NekoteWeb のうち不要なコードをギリギリまで削ってみたところ、動かなくなった
-                        // どうやら、HttpApplication を継承する NekoteWeb.Global を探すようで、
-                        // Global.asax がなくては、NameAndVersion が "System.Web 4.0" などになるようである
-
-                        Type xType = HttpContext.Current.ApplicationInstance.GetType ();
-
-                        while (xType != null && xType.Namespace == "ASP")
-                            xType = xType.BaseType;
-
-                        mAssembly = xType.Assembly;
+                        throw new NotSupportedException ();
                     }
                 }
 
@@ -101,14 +83,14 @@ namespace Nekote
         // https://stackoverflow.com/questions/10223799/how-can-my-code-find-if-its-running-inside-iis
         // https://stackoverflow.com/questions/7007440/how-to-find-out-if-the-current-application-is-an-asp-net-web-app
 
-        private static bool? mIsWeb = null;
+        private static readonly bool? mIsWeb = null;
 
         public static bool IsWeb
         {
             get
             {
                 if (mIsWeb == null)
-                    mIsWeb = HostingEnvironment.IsHosted;
+                    throw new NotSupportedException ();
 
                 return mIsWeb.Value;
             }

@@ -1,280 +1,45 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4AA00C53-C013-49E7-91AC-48AC76368A0F}</ProjectGuid>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Nekote</RootNamespace>
-    <AssemblyName>Nekote2018</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+
+    <!-- Migrated on 2024-03-12 -->
+    <Company>Yoshinao Inoguchi</Company>
+    <Version>0.0.31</Version>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <NoWarn>CS1591, IDE0017, IDE0028, IDE1006</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <NoWarn>CS1591, IDE1006, IDE0017, IDE0028, CS1570</NoWarn>
-    <DocumentationFile>bin\Release\Nekote2018.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
-      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
-    </Reference>
-    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
-      <HintPath>..\packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
-    </Reference>
-    <Reference Include="Magick.NET-Q8-AnyCPU, Version=13.5.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
-      <HintPath>..\packages\Magick.NET-Q8-AnyCPU.13.5.0\lib\netstandard20\Magick.NET-Q8-AnyCPU.dll</HintPath>
-    </Reference>
-    <Reference Include="Magick.NET.Core, Version=13.5.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
-      <HintPath>..\packages\Magick.NET.Core.13.5.0\lib\netstandard20\Magick.NET.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="MailKit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
-      <HintPath>..\packages\MailKit.4.3.0\lib\net48\MailKit.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
-    </Reference>
-    <Reference Include="MimeKit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
-      <HintPath>..\packages\MimeKit.4.3.0\lib\net48\MimeKit.dll</HintPath>
-    </Reference>
-    <Reference Include="NAudio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
-      <HintPath>..\packages\NAudio.2.2.1\lib\net472\NAudio.dll</HintPath>
-    </Reference>
-    <Reference Include="NAudio.Asio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
-      <HintPath>..\packages\NAudio.Asio.2.2.1\lib\netstandard2.0\NAudio.Asio.dll</HintPath>
-    </Reference>
-    <Reference Include="NAudio.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
-      <HintPath>..\packages\NAudio.Core.2.2.1\lib\netstandard2.0\NAudio.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="NAudio.Midi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
-      <HintPath>..\packages\NAudio.Midi.2.2.1\lib\netstandard2.0\NAudio.Midi.dll</HintPath>
-    </Reference>
-    <Reference Include="NAudio.Wasapi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
-      <HintPath>..\packages\NAudio.Wasapi.2.2.1\lib\netstandard2.0\NAudio.Wasapi.dll</HintPath>
-    </Reference>
-    <Reference Include="NAudio.WinForms, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
-      <HintPath>..\packages\NAudio.WinForms.2.2.1\lib\net472\NAudio.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="NAudio.WinMM, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
-      <HintPath>..\packages\NAudio.WinMM.2.2.1\lib\netstandard2.0\NAudio.WinMM.dll</HintPath>
-    </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Formats.Asn1, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Formats.Asn1.8.0.0\lib\net462\System.Formats.Asn1.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Compression" />
-    <Reference Include="System.IO.Compression.FileSystem" />
-    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security" />
-    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Encoding.CodePages, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Encoding.CodePages.8.0.0\lib\net462\System.Text.Encoding.CodePages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Collections\nNameValueCollectionHelper.cs" />
-    <Compile Include="Collections\nStrings.cs" />
-    <Compile Include="Collections\nStringsSeparator.cs" />
-    <Compile Include="Data\nDateTimeBasedSimpleDataProvider.cs" />
-    <Compile Include="Data\nKeyBasedSimpleDataProvider.cs" />
-    <Compile Include="Data\nSqlite.cs" />
-    <Compile Include="Data\nSqliteCommandPartsBuilder.cs" />
-    <Compile Include="Data\nSqliteConnectionStringBuilder.cs" />
-    <Compile Include="Data\nSqliteDataProvider.cs" />
-    <Compile Include="Data\nSqliteDataReaderHelper.cs" />
-    <Compile Include="Exceptions\nDebugException.cs" />
-    <Compile Include="Exceptions\nInvalidFormatException.cs" />
-    <Compile Include="Exceptions\nBadOperationException.cs" />
-    <Compile Include="Exceptions\nCorruptDataException.cs" />
-    <Compile Include="Exceptions\nNotSupportedException.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Imaging\nImageFormat.cs" />
-    <Compile Include="Imaging\nImage.cs" />
-    <Compile Include="Imaging\nImageInfo.cs" />
-    <Compile Include="Imaging\nImageMagick.cs" />
-    <Compile Include="Imaging\nImageMagickSettings.cs" />
-    <Compile Include="IO\nDirectory.cs" />
-    <Compile Include="IO\nFile.cs" />
-    <Compile Include="IO\nManagedFile.cs" />
-    <Compile Include="IO\nManagedFilePathMode.cs" />
-    <Compile Include="IO\nManagedFileUtility.cs" />
-    <Compile Include="IO\nManagedImage.cs" />
-    <Compile Include="IO\nPath.cs" />
-    <Compile Include="IO\nQueuedDataWriter.cs" />
-    <Compile Include="IO\nTempDirectory.cs" />
-    <Compile Include="IO\nTempFile.cs" />
-    <Compile Include="Collections\nSimpleKvsDataProvider.cs" />
-    <Compile Include="Collections\nSimpleKvsEntry.cs" />
-    <Compile Include="Misc\nInitialized.cs" />
-    <Compile Include="Security\nSafeCode.cs" />
-    <Compile Include="Program\nLiterals.cs" />
-    <Compile Include="Logging\nSimpleLogEntry.cs" />
-    <Compile Include="Logging\nSimpleLogDataProvider.cs" />
-    <Compile Include="Logging\nSimpleLogNotificationMode.cs" />
-    <Compile Include="Logging\nSimpleLogType.cs" />
-    <Compile Include="Mail\nMimeAttachment.cs" />
-    <Compile Include="Mail\nMimeMessage.cs" />
-    <Compile Include="Mail\nNotificationMailMessageCreator.cs" />
-    <Compile Include="Mail\nSmtpClient.cs" />
-    <Compile Include="Mail\nSmtpSettings.cs" />
-    <Compile Include="Collections\nArray.cs" />
-    <Compile Include="Collections\nEnumerable.cs" />
-    <Compile Include="Program\nAutoLock.cs" />
-    <Compile Include="Misc\nBase36.cs" />
-    <Compile Include="Program\nStatic.cs" />
-    <Compile Include="Program\nLibrary.cs" />
-    <Compile Include="Security\nHash.cs" />
-    <Compile Include="Security\nRandom.cs" />
-    <Compile Include="Hardware\nSoundPlayer.cs" />
-    <Compile Include="Program\nApplication.cs" />
-    <Compile Include="Program\nLocker.cs" />
-    <Compile Include="Security\nRootAuthentication.cs" />
-    <Compile Include="Security\nValidator.cs" />
-    <Compile Include="Collections\nDictionary.cs" />
-    <Compile Include="Collections\nDictionaryHelper.cs" />
-    <Compile Include="Text\nHtmlBuilder.cs" />
-    <Compile Include="Text\nHtmlChars.cs" />
-    <Compile Include="Text\nIgnoreCase.cs" />
-    <Compile Include="Collections\nNameValueCollection.cs" />
-    <Compile Include="Collections\nStringTableRow.cs" />
-    <Compile Include="Collections\nStringTable.cs" />
-    <Compile Include="Collections\nStringTableHelper.cs" />
-    <Compile Include="Types\nBool.cs" />
-    <Compile Include="Types\nByte.cs" />
-    <Compile Include="Collections\nByteArray.cs" />
-    <Compile Include="Types\nChar.cs" />
-    <Compile Include="Text\nCString.cs" />
-    <Compile Include="Types\nDateTime.cs" />
-    <Compile Include="Types\nDateTimeFormat.cs" />
-    <Compile Include="Types\nDecimal.cs" />
-    <Compile Include="Types\nDouble.cs" />
-    <Compile Include="Types\nEnum.cs" />
-    <Compile Include="Types\nFloat.cs" />
-    <Compile Include="Types\nGuid.cs" />
-    <Compile Include="Text\nHtmlString.cs" />
-    <Compile Include="Types\nInt.cs" />
-    <Compile Include="Types\nLong.cs" />
-    <Compile Include="Types\nSByte.cs" />
-    <Compile Include="Types\nShort.cs" />
-    <Compile Include="Text\nSqlString.cs" />
-    <Compile Include="Text\nString.cs" />
-    <Compile Include="Types\nTimeSpan.cs" />
-    <Compile Include="Types\nUInt.cs" />
-    <Compile Include="Types\nULong.cs" />
-    <Compile Include="Types\nUShort.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Security\nSimpleUserDataProvider.cs" />
-    <Compile Include="Security\nSimpleUserEntry.cs" />
-    <Compile Include="Logging\nSimpleUserLoginLogDataWriter.cs" />
-    <Compile Include="Logging\nSimpleUserLoginLogEntry.cs" />
-    <Compile Include="Logging\nSimpleUserLoginLogEntryCsvIndices.cs" />
-    <Compile Include="Security\nSimpleUserType.cs" />
-    <Compile Include="Logging\nSimplePageAccessLogEntry.cs" />
-    <Compile Include="Logging\nSimplePageAccessLogDataWriter.cs" />
-    <Compile Include="Logging\nSimplePageAccessLogEntryCsvIndices.cs" />
-    <Compile Include="Web\nUrl.cs" />
-    <Compile Include="Security\nAuthenticationResult.cs" />
-    <Compile Include="Web\nWebPage.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Magick.NET-Q8-AnyCPU">
-      <Version>13.5.0</Version>
+      <Version>13.6.0</Version>
     </PackageReference>
     <PackageReference Include="MailKit">
-      <Version>4.3.0</Version>
+      <Version>4.4.0</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.Win32.Registry">
-      <Version>5.0.0</Version>
-    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="NAudio">
       <Version>2.2.1</Version>
     </PackageReference>
     <PackageReference Include="Portable.BouncyCastle">
       <Version>1.9.0</Version>
     </PackageReference>
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
     <PackageReference Include="System.Data.SQLite.Core">
       <Version>1.0.118</Version>
     </PackageReference>
-    <PackageReference Include="System.Formats.Asn1">
-      <Version>8.0.0</Version>
-    </PackageReference>
-    <PackageReference Include="System.Security.AccessControl">
-      <Version>6.0.0</Version>
-    </PackageReference>
-    <PackageReference Include="System.Text.Encoding.CodePages">
-      <Version>8.0.0</Version>
-    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.SystemWebAdapters" Version="1.3.2" />
+    <PackageReference Include="System.Formats.Asn1" Version="8.0.0" />
+    <PackageReference Include="System.Security.AccessControl" Version="6.0.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

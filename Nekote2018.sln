@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nekote2018", "Nekote2018\Nekote2018.csproj", "{4AA00C53-C013-49E7-91AC-48AC76368A0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nekote2018", "Nekote2018\Nekote2018.csproj", "{4AA00C53-C013-49E7-91AC-48AC76368A0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NekoteConsole2018", "NekoteConsole2018\NekoteConsole2018.csproj", "{39E95D1F-C07A-48D4-BDB8-00D3FD30FC48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NekoteConsole2018", "NekoteConsole2018\NekoteConsole2018.csproj", "{39E95D1F-C07A-48D4-BDB8-00D3FD30FC48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

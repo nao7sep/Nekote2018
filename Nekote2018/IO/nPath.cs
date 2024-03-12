@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 using System.IO;
 using System.Reflection;
-using System.Web.Hosting;
 
 namespace Nekote
 {
@@ -174,7 +173,7 @@ namespace Nekote
         // 他にも方法がいろいろあるようだが、たとえば HttpContext.Current は Request がないところやサブスレッドでは使えなかった記憶がある
         // HttpRuntime.AppDomainAppPath も使えそうだが、HostingEnvironment より優れる理由がないため却下
 
-        private static string mWebApplicationDirectoryPath = null;
+        private static readonly string mWebApplicationDirectoryPath = null;
 
         public static string WebApplicationDirectoryPath
         {
@@ -185,7 +184,7 @@ namespace Nekote
                     // 手元の環境ではパスの末尾に \ が入るため、安全性の高いメソッドを追加してトリム
                     // 他にも .NET のクラスライブラリーからパスをもらうところが多々あるが、
                     // 全てに TrimEnd をかますのではチェックが面倒なので、他は困ってからにする
-                    mWebApplicationDirectoryPath = TrimEnd (HostingEnvironment.ApplicationPhysicalPath);
+                    throw new NotSupportedException ();
 
                 return mWebApplicationDirectoryPath;
             }

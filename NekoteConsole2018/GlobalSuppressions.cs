@@ -6,4 +6,9 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage ("CodeQuality", "IDE0079")]
+[assembly: SuppressMessage ("Interoperability", "CA1416")]
 [assembly: SuppressMessage ("Style", "IDE0045")]
+[assembly: SuppressMessage ("Style", "IDE0063")]
+[assembly: SuppressMessage ("Style", "IDE0090")]
+[assembly: SuppressMessage ("Style", "IDE0300")]
+[assembly: SuppressMessage ("Style", "IDE0305")]
