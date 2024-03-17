@@ -83,14 +83,16 @@ namespace Nekote
         // https://stackoverflow.com/questions/10223799/how-can-my-code-find-if-its-running-inside-iis
         // https://stackoverflow.com/questions/7007440/how-to-find-out-if-the-current-application-is-an-asp-net-web-app
 
-        private static readonly bool? mIsWeb = null;
+        private static bool? mIsWeb = null;
 
         public static bool IsWeb
         {
             get
             {
                 if (mIsWeb == null)
-                    throw new NotSupportedException ();
+                    mIsWeb = false; // All web-related functions are disabled.
+                    // I've recently migrated this project from .NET Framework 4.8 to .NET 8,
+                    //     which doesnt seem to support (some of?) System.Web.
 
                 return mIsWeb.Value;
             }
