@@ -10,7 +10,7 @@
 
     <!-- Migrated on 2024-03-12 -->
     <Company>Yoshinao Inoguchi</Company>
-    <Version>0.0.32</Version>
+    <Version>0.0.33</Version>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <NoWarn>CS1591, IDE0017, IDE0028, IDE1006</NoWarn>
